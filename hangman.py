@@ -1,9 +1,5 @@
-from os import system
-def clear(): system('cls')
-def dialogue(string = ''):
-    x = input(string)
-    clear()
-    return x
+from stuff import *
+
 attempts = 0
 hangman = [' '] * 25
 hangman_dead = [' '] * 25
@@ -97,4 +93,5 @@ def main():
             print(f'You lost...\nThe word was {word}\n{display(hangman_dead)}')
             if dialogue('Play again? ').lower() == 'no':
                 break
-if __name__ == '__main__': main()
+if __name__ == '__main__': 
+    main()
